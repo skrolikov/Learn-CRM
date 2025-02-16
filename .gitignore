@@ -12,3 +12,4 @@
 .env.production
 .phpactor.json
 auth.json
+/database/
