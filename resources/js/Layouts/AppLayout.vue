@@ -34,7 +34,7 @@ const navItems = [
 </script>
 
 <template>
-    <div class="bg-gradient-to-br from-blue-300 to-blue-500 dark:bg-gray-900">
+    <div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:bg-gray-900">
         <nav>
             <!-- Primary Navigation Menu -->
             <div class="mx-auto px-4 sm:px-6 lg:px-8">

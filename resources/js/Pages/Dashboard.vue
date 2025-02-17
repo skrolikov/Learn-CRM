@@ -5,7 +5,7 @@
             <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
                 <!-- Всего заказов -->
                 <div>
-                    <Card class="!shadow-none text-center !rounded-2xl !bg-blue-400 border border !border-blue-300">
+                    <Card class="!shadow-none text-center !rounded-2xl !bg-blue-300 border border !border-blue-200">
                         <template #title>
                             <i class="pi pi-shopping-cart bg-gray-800/25 text-white p-3 rounded-full" />
                             <p>Всего заказов</p>
@@ -14,14 +14,14 @@
                             <p class="text-black/50">Общее число</p>
                         </template>
                         <template #content>
-                            <h1 class="text-3xl font-bold text-primary">{{ totalOrders }}</h1>
+                            <h1 class="text-3xl font-bold text-black/25">{{ totalOrders }}</h1>
                         </template>
                     </Card>
                 </div>
 
                 <!-- Отказов -->
                 <div>
-                    <Card class="!shadow-none text-center !rounded-2xl !bg-red-400 border !border-red-300">
+                    <Card class="!shadow-none text-center !rounded-2xl !bg-red-300 border !border-red-200">
                         <template #title>
                             <i class="pi pi-ban bg-gray-800/25 text-white p-3 rounded-full" />
                             <p>Отказов</p>
@@ -30,14 +30,14 @@
                             <p class="text-black/50">Клиент отказался</p>
                         </template>
                         <template #content>
-                            <h1 class="text-3xl font-bold text-red-500">{{ countRefused }}</h1>
+                            <h1 class="text-3xl font-bold text-black/25">{{ countRefused }}</h1>
                         </template>
                     </Card>
                 </div>
 
                 <!-- Готовы -->
                 <div>
-                    <Card class="!shadow-none text-center !rounded-2xl !bg-green-400 border !border-green-300">
+                    <Card class="!shadow-none text-center !rounded-2xl !bg-green-300 border !border-green-200">
                         <template #title>
                             <i class="pi pi-check-circle bg-gray-800/25 text-white p-3 rounded-full" />
                             <p>Готовы</p>
@@ -46,14 +46,14 @@
                             <p class="text-black/50">Статус "Готов"</p>
                         </template>
                         <template #content>
-                            <h1 class="text-3xl font-bold text-green-500">{{ countReady }}</h1>
+                            <h1 class="text-3xl font-bold text-black/25">{{ countReady }}</h1>
                         </template>
                     </Card>
                 </div>
 
                 <!-- Уникальных клиентов -->
                 <div>
-                    <Card class="!shadow-none text-center !rounded-2xl !bg-purple-400 border !border-purple-300">
+                    <Card class="!shadow-none text-center !rounded-2xl !bg-purple-300 border !border-purple-200">
                         <template #title>
                             <i class="pi pi-users bg-gray-800/25 text-white p-3 rounded-full" />
                             <p>Уникальных клиентов</p>
@@ -62,7 +62,7 @@
                             <p class="text-black/50">По телефону</p>
                         </template>
                         <template #content>
-                            <h1 class="text-3xl font-bold text-purple-500">{{ uniqueClients }}</h1>
+                            <h1 class="text-3xl font-bold text-black/25">{{ uniqueClients }}</h1>
                         </template>
                     </Card>
                 </div>
@@ -77,7 +77,7 @@
             <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
                 <!-- Прибыль сегодня -->
                 <div>
-                    <Card class="!shadow-none text-center !rounded-2xl !bg-orange-400 border !border-orange-300">
+                    <Card class="!shadow-none text-center !rounded-2xl !bg-orange-300 border !border-orange-200">
                         <template #title>
                             <i class="pi pi-dollar bg-gray-800/25 text-white p-3 rounded-full" />
                             <p>Прибыль сегодня</p>
@@ -86,7 +86,7 @@
                             <p class="text-black/50">За текущий день</p>
                         </template>
                         <template #content>
-                            <h1 class="text-3xl font-bold text-orange-500">
+                            <h1 class="text-3xl font-bold text-black/25">
                                 {{ profitToday.toFixed(2) }} &#8381;
                             </h1>
                             <Chart type="line" :data="profitTodayChartData" :options="lineChartOptions"
@@ -97,7 +97,7 @@
 
                 <!-- Прибыль за неделю -->
                 <div>
-                    <Card class="!shadow-none text-center !rounded-2xl !bg-teal-400 border !border-teal-300">
+                    <Card class="!shadow-none text-center !rounded-2xl !bg-teal-300 border !border-teal-200">
                         <template #title>
                             <i class="pi pi-chart-line bg-gray-800/25 text-white p-3 rounded-full" />
                             <p>Прибыль за неделю</p>
@@ -106,7 +106,7 @@
                             <p class="text-black/50">Последние 7 дней</p>
                         </template>
                         <template #content>
-                            <h1 class="text-3xl font-bold text-teal-500">
+                            <h1 class="text-3xl font-bold text-black/25">
                                 {{ profitWeek.toFixed(2) }} &#8381;
                             </h1>
                             <!-- Пример мини-графика Line для "недели" -->
@@ -118,7 +118,7 @@
 
                 <!-- Прибыль за месяц -->
                 <div>
-                    <Card class="!shadow-none text-center !rounded-2xl !bg-yellow-400 border !border-yellow-300">
+                    <Card class="!shadow-none text-center !rounded-2xl !bg-yellow-300 border !border-yellow-200">
                         <template #title>
                             <i class="pi pi-calendar bg-gray-800/25 text-white p-3 rounded-full" />
                             <p>Прибыль за месяц</p>
@@ -127,7 +127,7 @@
                             <p class="text-black/50">Текущий месяц</p>
                         </template>
                         <template #content>
-                            <h1 class="text-3xl font-bold text-yellow-600">
+                            <h1 class="text-3xl font-bold text-black/25">
                                 {{ profitMonth.toFixed(2) }} &#8381;
                             </h1>
                             <Chart type="line" :data="profitMonthChartData" :options="lineChartOptions"
