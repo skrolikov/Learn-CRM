@@ -3,6 +3,9 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\API\OrderHistoryController;
+
+Route::apiResource('api/order-history', OrderHistoryController::class)->middleware('auth:sanctum');
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -25,4 +28,5 @@ Route::middleware([
     Route::get('/orders', function () {
         return Inertia::render('OrdersPage');
     })->name('orderspage');
+    
 });

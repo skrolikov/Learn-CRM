@@ -148,13 +148,9 @@
       <!-- Правая часть: История в виде чата -->
       <div class="right-panel pl-2"
         style="width: 50%; border-left: 1px solid #ccc; display: flex; flex-direction: column;">
-        <Panel header="История" style="flex: 1;">
-          <div class="chat-area" style="height: 100%; width: 100%; overflow-y: auto;">
-            <!-- Здесь можно отрисовывать сообщения чата -->
-            <p>История чата будет отображаться здесь во всю ширину.</p>
-          </div>
-        </Panel>
+        <OrderHistory :orderId="props.orderData.id" />
       </div>
+
 
     </div>
   </Sidebar>
@@ -171,6 +167,7 @@ import RadioButton from 'primevue/radiobutton';
 import MultiSelect from 'primevue/multiselect';
 import Button from 'primevue/button';
 import { Divider, IftaLabel, Panel, Select, SelectButton } from 'primevue';
+import OrderHistory from '@/Components/OrderHistory.vue';
 
 // Свойства компонента
 const props = defineProps({

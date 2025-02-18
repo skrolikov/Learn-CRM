@@ -15,6 +15,9 @@ use App\Http\Controllers\API\DeviceBrandController;
 use App\Http\Controllers\API\DeviceColorController;
 use App\Http\Controllers\API\DeviceController;
 use App\Http\Controllers\API\OrderController;
+use App\Http\Controllers\API\OrderHistoryController;
+
+
 
 Route::apiResource('clients', ClientController::class);
 Route::apiResource('product-categories', ProductCategoryController::class);
